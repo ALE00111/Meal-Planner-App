@@ -1,32 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +6,231 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start by moving the element up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End in its original position */
+  }
+}
+
+*{
+  /* animation: fadeIn 1s ease-out; */
+}
+
+h1 {
+  display:flex;
+  text-wrap: wrap;
+  font-weight: bold;
+  text-align:center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+p{
+  font-weight: bold;
+  text-align:center;
+  color: white;
+  font-size: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  text-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  color: white;
+}
+
+.container button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid gray;
+  /* display: none; Initially hidden */
+}
+
+.container:hover .menu {
+  display: block;
+}
+
+.select-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  height: 50px;
+}
+
+.select-box {
+  border: 2px solid white;
+  appearance: none;
+  padding: 0 50px 0 15px; /* Adjusted right padding to account for icon */
+  width: 100%;
+  color: black;
+  background-color: inherit;
+  font-size:20px;
+  border-radius: 5px; 
+  font-family: inherit
+}
+
+.select-container .icon-container {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+  pointer-events: none; /* Ensure the icon doesn’t block select interactions */
+}
+
+.home-button{
+  display:flex;
+}
+
+.card{
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
+  padding: 70px;
+  margin: auto;
+  text-align: center;
+  max-width: 250px;
+  display: block;
+  background-image: linear-gradient(#fffb00, #e52e71);
+  background-attachment: fixed;
+  color: black;
+}
+
+.card .card-image{
+  max-width: 60%;
+  height:auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .card-title{
+  font-family: Noto Sans, sans-serif;
+  margin: 0;
+  color: black;
+}
+
+.card .card-text{
+  font-family: Arial, sans-serif;
+  color: hsl(0, 0%, 30%)
+}
+
+.card h1 {
+  color: black;
+}
+
+.card h2 {
+  color: black;
+  text-wrap:wrap;
+}
+
+.card p{
+  color: black;
+  font-size: 20px;
+  text-wrap: wrap;
+}
+
+body {
+  height: 100vh;
+   background: linear-gradient(90deg,#e52e71,#ff8a00);
+}
+
+button {
+  background: inherit;
+  box-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.1);
+  color: black;
+  cursor: pointer;
+  padding: 5px 20px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+}
+
+.slider-thumb::before {
+  position: absolute;
+  content: "";
+  left: 30%;
+  top: 20%;
+  width: 450px;
+  height: 450px;
+  background: #17141d;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape{
+  0%,100%{
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  34%{
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+  }
+  50%{
+    transform: translate3d(0,0,0) rotateZ(0.01deg);
+  }
+  67%{
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+  }
+}
+
+
+.container-calc {
+  display: inline-flex;
+  font-size: 30px;
+  padding: 20px; /* Adds space around the content */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  background-color: peachpuff;
+  opacity: 0.85; 
+  border-radius: 10%;
+  box-sizing: border-box; 
+  border: 3px solid #0d0301; 
+}
+
+.container-calc button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.page-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically at top */
+  /* height: 75vh; Make the container fill the full height of the viewport */
 }
