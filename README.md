@@ -8,12 +8,12 @@ This web application has two functions:
 2.To rpoduce random recipes based on dietary and health preferences for breakfast, lunch, and dinner.
 
 Steps to use:
-1.First for safety and secuirty reasons i can't upload my specific mongoDB databse, but I provided all of the JSON files so that you can replicate the database on your own
-2.Clone the repo
-3.There are multiple ways to run the program, but the way I do it on VS code is open two terminals and specifically mkdir to client and mkdir into server on the other
-4.On the client one, do npm start
-5.On the server one, do python meal.py
-6.Then open http://localhost:3000/ and you're all set!
+1. First for safety and secuirty reasons i can't upload my specific mongoDB databse, but I provided all of the JSON files so that you can replicate the database on your own
+2. Clone the repo
+3. There are multiple ways to run the program, but the way I do it on VS code is open two terminals and specifically mkdir to client and mkdir into server on the other
+4. On the client one, do npm start
+5. On the server one, do python meal.py
+6. Then open http://localhost:3000/ and you're all set!
 
 Below are extra React npm commands you can use in the terminal to try out.
 # Getting Started with Create React App
