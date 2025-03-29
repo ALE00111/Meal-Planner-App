@@ -5,7 +5,8 @@ I accept all critiques on how to improve and new features that I can possibly im
 Functionality: 
 This web application has two functions:
 1.To track and calculate the amount of calories you've eaten in a day, week, etc..
-2.To rpoduce random recipes based on dietary and health preferences for breakfast, lunch, and dinner.
+2.To produce random recipes based on dietary and health preferences for breakfast, lunch, and dinner.
+3.Adding Gordon Ramsay Bot that responds to any and all commands.
 
 Steps to use:
 1. First for safety and secuirty reasons i can't upload my specific mongoDB databse, but I provided all of the JSON files so that you can replicate the database on your own
