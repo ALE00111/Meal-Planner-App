@@ -88,6 +88,7 @@ def receive_data():
     user_input_diet = data.get('diet')  # Extract specific data field(dietLabel)
     user_input_health = data.get('health') #Extract speicifid data field(healthLabel)
     
+    #Checks for invalid types of type, dish, diet, and health
     if user_input_type not in ['breakfast', 'lunch', 'dinner']:
         return jsonify({'error': 'Invalid meal type'}), 400
     
@@ -98,7 +99,6 @@ def receive_data():
         return jsonify({'error': 'Invalid diet type'}), 400
 
     if user_input_health not in ['Vegan','Pork-Free', 'Vegetarian', 'Pescatarian', 'Any']:
-        
         return jsonify({'error': 'Invalid health type'}), 400
     
 
@@ -115,8 +115,8 @@ def receive_data():
     if meal is None:
         return jsonify({'error': 'No meals available'}), 404
 
-  # Send back only the fields you're interested in
-    response_data = {   #grabbng all data and giving it a specific name
+    #Send back only the fields you're interested in
+    response_data = {   #grabbing all data and giving it a specific name
         'name': meal.get('label'),
         'dietLabels': meal.get('dietLabels'),
         'healthLabels': meal.get('healthLabels'),
@@ -125,8 +125,7 @@ def receive_data():
         'mealType': meal.get('mealType'),
         'image': meal.get('image')
     }
-
     return jsonify(response_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port = 5005) #sets flask debugger and only accepts requests incoming from port 5005, to seperate both flask apps

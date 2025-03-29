@@ -1,6 +1,7 @@
 import './App.css';
 import Button from '@mui/material/Button';
 import {Link} from "react-router-dom"
+
 function Calc(){
     return (
         <>
@@ -12,12 +13,15 @@ function Calc(){
                 2.You can create a random meal plan based on your specific dietary and health restrictions. 
             </p>
             <div className = "container">
-            <Link to = "/calc">
-                <Button variant="contained" type = "submit">GO TO CALORIE CALCULATOR</Button>
-            </Link>
-            <Link to = "./nutri">
-                <Button variant="contained" type = "submit">GO TO MEAL RECOMMENDER</Button>
-            </Link>
+                <Link to = "/calc">
+                    <Button variant ="contained" type = "submit">GO TO CALORIE CALCULATOR</Button>
+                </Link>
+                <Link to = "./nutri">
+                    <Button variant ="contained" type = "submit">GO TO MEAL RECOMMENDER</Button>
+                </Link>
+                <Link to = "/bot">
+                    <Button variant = "contained" type = "submit">GO TO FOOD BOT</Button>
+                </Link>
             </div>
         </>
     )

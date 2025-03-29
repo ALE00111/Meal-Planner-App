@@ -6,6 +6,7 @@ import {
 import Home from "./home"
 import Calc from "./calc"
 import Nutri from "./nutri"
+import Bot from "./bot"
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
         <Route path = "/" element = {<Home/>}/>
         <Route path = "/calc" element = {<Calc/>}/>
         <Route path = "/nutri" element = {<Nutri/>}/>
+        <Route path = "/bot" element = {<Bot/>}/>
       </Routes>
     </div>
   );
 }
 
 export default App;
+ 

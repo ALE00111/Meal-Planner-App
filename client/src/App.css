@@ -234,3 +234,28 @@ button {
   align-items: center; /* Center vertically at top */
   /* height: 75vh; Make the container fill the full height of the viewport */
 }
+
+.bot-container {
+  position: relative;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically at top */
+  flex-wrap: wrap;
+  padding: 35px; 
+}
+
+.bot-response-container {
+  display: inline-flex;
+  font-size: 30px;
+  padding: 20px; /* Adds space around the content */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  background-color: rgb(7, 7, 7);
+  color : white; /*Text Color*/
+  opacity: 0.85; 
+  border-radius: 10%;
+  box-sizing: border-box; 
+  /* border: 3px solid #0d0301;  */
+}

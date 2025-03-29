@@ -14,7 +14,7 @@ const MealComponent = ({mealPref}) => {
 
         try {
             // Send a POST request to the Flask backend using axios
-            const res = await axios.post('http://127.0.0.1:5000/', {
+            const res = await axios.post('http://127.0.0.1:5005/', {
                 type: type,  // Send input as a JSON object
                 dish: dish, // Send input as a JSON object
                 diet: diet, // Send input as a JSON object
